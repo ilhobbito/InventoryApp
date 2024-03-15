@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Inventory3.Views.Freezer"
+             Title="Freezer">
+    <StackLayout>
+        <Label 
+            Text="Välkommen till Frysen/Frysfacket!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <ListView ItemsSource="{Binding Products}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10"
+                RowDefinitions="Auto"
+                ColumnDefinitions="200"
+                ColumnSpacing="20">
+                            <!--<Label Grid.Column="1"
+                     Text="{Binding Id}"
+                     FontSize="32"></Label>-->
+                            <Label Grid.Column="1"
+                     Text="{Binding ProductName}"
+                     FontSize="10"></Label>
+                            <Label Grid.Column="1"
+                     Text="{Binding Quantity}"
+                     FontSize="10"></Label>
+                            <Label Grid.Column="1"
+                     Text="{Binding Description}"
+                     FontSize="10"></Label>
+                            <Label Grid.Column="1"
+                    Text="{Binding PurchasingDate}"
+                    FontSize="10"></Label>
+                            <Label Grid.Column="1"
+                    Text="{Binding BestBefore}"
+                    FontSize="10"></Label>
+                            <Label Grid.Column="1"
+                    Text="{Binding Place}"
+                    FontSize="10"></Label>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button
+            Text="Gå tillbaka"
+            Clicked="ClickedOnGoBackToStart"></Button>
+    </StackLayout>
+</ContentPage>

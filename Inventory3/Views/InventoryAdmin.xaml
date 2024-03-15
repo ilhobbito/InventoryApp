@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Inventory3.Views.InventoryAdmin"
+             Title="InventoryAdmin">
+    <ScrollView>
+        <VerticalStackLayout
+
+            Padding="30,0"
+            Spacing="25">
+                <Button
+         Text="Gå tillbaka"
+         Clicked="ClickedOnGoBackToMainMeny"></Button>
+                <Label 
+         Text="Här lägger du till varor i dina utrymmen!"
+         VerticalOptions="Center" 
+         HorizontalOptions="Center" />
+                <Entry
+         x:Name="ProductNameEntry"
+         Placeholder="Produkt namn"></Entry>
+                <Entry
+         x:Name="QuantityEntry"
+         Placeholder="Kvantitet"></Entry>
+                <Entry
+         x:Name="DescriptionEntry"
+         Placeholder="Beskrivning"></Entry>
+                <Entry
+         x:Name="PurchasingDateEntry"
+         Placeholder="Inköpsdatum"></Entry>
+                <Entry
+         x:Name="BestBeforeEntry"
+         Placeholder="Bäst före"></Entry>
+                <Button
+         x:Name="AddFridgeProduct"
+         Text="Lägg till produkt i Kylskåpet"
+         Clicked="ClickedOnAddFridgeProduct"></Button>
+                <Button
+         x:Name="AddFreezerProduct"
+         Text="Lägg till produkt i Frysen/Frysfacket"
+         Clicked="ClickedOnAddFreezerProduct"></Button>
+            <Button
+         x:Name="AddPantryProduct"
+         Text="Lägg till produkt i Skafferiet"
+         Clicked="ClickedOnAddPantryProduct"></Button>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

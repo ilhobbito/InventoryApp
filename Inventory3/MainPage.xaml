@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Inventory3.MainPage">
+    <ScrollView>
+        <VerticalStackLayout
+          Padding="30,0"  
+            Spacing="25">
+            <StackLayout>
+                <Label Text="Nyköping:"
+                       FontSize="Header"
+                       FontAttributes="Bold"/>
+                <Label 
+                    Text="Temperatur: "/>
+                <Label
+                x:Name="Temp"/>
+                <Label 
+                    Text="Molnrisk: "/>
+                <Label
+                x:Name="CloudPct"/>
+                <Label 
+                    Text="Känns som: "/>
+                <Label
+                x:Name="FeelsLike"/>
+                <Label 
+                    Text="Luftfuktighet: "/>
+                <Label
+                x:Name="Humidity"/>
+                <Label 
+                    Text="Lägsta temperatur: "/>
+                <Label
+                x:Name="MinTemp"/>
+                <Label 
+                    Text="Högsta temperatur: "/>
+                <Label
+                x:Name="MaxTemp"/>
+                <!--<Label 
+                    Text="Vindstyrka: "/>-->
+                <!--<Label
+                x:Name="WindSpeed"/>
+                <Label Text="Vindtemperatur: "/>
+                <Label
+                x:Name="WindDegrees"/>
+                <Label Text="Soluppgång: "/>
+                <Label
+                x:Name="Sunrise"/>
+                <Label Text="Solnedgång: "/>
+                <Label
+                x:Name="Sunset"/>-->
+            </StackLayout>
+            <Button
+             Text="Kylskåp"
+             Clicked="ClickedOnFridge"></Button>
+            <Button
+             Text="Frys/Frysfack"
+             Clicked="ClickedOnFreezer"></Button>
+            <Button
+             Text="Skafferi"
+             Clicked="ClickedOnPantry"></Button>
+            <Button
+             Text="Lägg till produkter"
+             Clicked="ClickedOnInventoryAdmin"></Button>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
